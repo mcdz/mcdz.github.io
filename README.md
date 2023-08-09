@@ -1,2 +1,1 @@
-- @mcdz
-- Whiskers Interactive
+$ Whiskers Interactive
