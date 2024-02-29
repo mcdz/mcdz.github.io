@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Montserrat';
     src: url("fonts/Montserrat-Black.eot");
@@ -754,30 +755,58 @@ body {
 
 .intro--banner button .btn-background {
     position: absolute;
-    top: 0;
-    left: 23px;
-    right: 0;
-    height: 100%;
+    top: 80%;
+    left: 0%;
+    right: 0%;
+    height: 20%;
     background-color: #0f33ff;
     z-index: -1;
-    -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out
+    -webkit-transition: top .2s ease-in, height .2s ease-in;
+    /* Transition both properties */
+    transition: top .2s ease-in, height .2s ease-in;
+    /* Transition both properties */
 }
 
 .intro--banner button:hover .btn-background {
-    left: 0
+    top: 0%;
+    height: 100%;
 }
 
 .intro--banner button:focus {
-    outline: none
+    outline: none;
+}
+
+#moving-image {
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    /* Smooth transition */
 }
 
 .intro--banner button svg {
     position: relative;
     left: 5px;
     width: 15px;
-    fill: #fff
+    fill: #fff;
 }
+
+.intro--banner button:hover {
+    transform: scale(1.2);
+    /* Initial scale along the X-axis */
+    transform-origin: left;
+    /* Set the transform origin to the left */
+    transition: transform 0.2s ease-in-out;
+    /* Adding transition for smooth animation */
+}
+
+.intro--banner button {
+    transform: scale(1);
+    /* Initial scale along the X-axis */
+    transform-origin: left;
+    /* Set the transform origin to the left */
+    transition: transform 0.2s ease-in-out;
+    /* Adding transition for smooth animation */
+}
+
 
 .intro--banner img {
     position: absolute;
@@ -802,7 +831,7 @@ body {
 .intro--options>a {
     max-width: 250px;
     text-decoration: none;
-    color: #282828;
+    color: #7a7a7a;
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out
 }
