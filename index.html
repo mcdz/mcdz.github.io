@@ -33,6 +33,27 @@
       image.style.transform += `translateY(${floatY}px)`; // Append to existing transform
     }, 50); // Adjust interval for smoother motion
 
+    document.addEventListener('mousemove', function (e) {
+      const image = document.getElementById('moving-image-ship');
+      const xPos = (e.clientX / window.innerWidth) - 0.5; // Normalize cursor position
+      const yPos = (e.clientY / window.innerHeight) - 0.5; // Normalize cursor position
+      const maxMovement = 160; // Maximum movement in pixels
+
+      const translateX = xPos * maxMovement;
+      const translateY = yPos * maxMovement;
+
+      image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    });
+
+    setInterval(function () {
+      const image = document.getElementById('moving-image-ship');
+      const maxFloat = 0.8; // Maximum floating distance in pixels
+
+      const floatY = Math.sin(Date.now() / 1000) * maxFloat; // Y-axis floating motion
+
+      image.style.transform += `translateY(${floatY}px)`; // Append to existing transform
+    }, 50); // Adjust interval for smoother motion
+
     document.addEventListener('DOMContentLoaded', function () {
       const text = "Your next<br>interactive<br>experience".split('');
       let index = 0;
@@ -212,7 +233,7 @@
                       </svg>
                     </span>
                   </a>
-                  <img src="assets/img/about-visual.png" alt="About Us">
+                  <img id="moving-image-ship" src="assets/img/about-visual.png" alt="About Us">
                 </div>
                 <div class="about--options">
                   <a href="#0">

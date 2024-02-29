@@ -782,6 +782,12 @@ body {
     /* Smooth transition */
 }
 
+#moving-image-ship{
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    /* Smooth transition */
+}
+
 .intro--banner button svg {
     position: relative;
     left: 5px;
