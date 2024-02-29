@@ -38,11 +38,6 @@ html {
 }
 
 body {
-    background-image: url("../img/contact-visual.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
     margin: 0
 }
 
@@ -253,21 +248,21 @@ th {
     padding: 0
 }
 
-::-moz-selection {
-    background: #FFF498
+/* ::-moz-selection {
+    background: #e9e9e979
 }
 
 ::selection {
-    background: #FFF498
+    background: #e9e9e979
 }
 
 ::-moz-selection {
-    background: #FFF498
+    background: #e9e9e979
 }
 
 img::-moz-selection {
     background: transparent
-}
+} */
 
 img::selection {
     background: transparent
@@ -278,11 +273,17 @@ img::-moz-selection {
 }
 
 body {
-    -webkit-tap-highlight-color: #FFF498
+    -webkit-tap-highlight-color: #98b3ff41
 }
 
 body {
     background-color: #0c0c0c;
+
+    /* background-image: url("../img/contact-visual.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ */
     font-size: 14px;
     line-height: 1.6;
     font-family: "Montserrat", sans-serif;
@@ -585,7 +586,7 @@ body {
     transition: border-radius .5s ease-in-out;
 }
 
-.header--cta.cta:hover{
+.header--cta.cta:hover {
     background-color: #c83cf3;
     transform: translate(-50%, -50%);
     line-height: 36px;
@@ -1772,12 +1773,22 @@ body {
 }
 
 .perspective--modalview {
+    background-image: url("../img/contact-visual-dim.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     position: fixed;
     -webkit-perspective: 1500px;
     perspective: 1500px
 }
 
 .container {
+    background-image: url("../img/contact-visual.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     position: relative;
     -webkit-transform: translateZ(0) translateX(0) rotateY(0deg);
     transform: translateZ(0) translateX(0) rotateY(0deg);
@@ -1788,6 +1799,33 @@ body {
     transition: transform .4s;
     transition: transform .4s, -webkit-transform .4s
 }
+
+/* .container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in::before {
+    opacity: 1;
+}
+
+.fade-out::before {
+    opacity: 0;
+} */
 
 .modalview .container {
     position: absolute;
@@ -1889,7 +1927,8 @@ body {
 }
 
 .outer-nav>li:hover {
-    transform: scale(1.1); /* Adjust scaling factor as desired */
+    transform: scale(1.1);
+    /* Adjust scaling factor as desired */
 }
 
 .outer-nav>li.is-active::before {
