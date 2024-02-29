@@ -38,6 +38,11 @@ html {
 }
 
 body {
+    background-image: url("../img/contact-visual.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     margin: 0
 }
 
@@ -1216,7 +1221,7 @@ body {
     transform: rotate(45deg);
     width: 10px;
     height: 10px;
-    background-color: #0f33ff
+    background-color: #091a79
 }
 
 .about--banner h2 {
@@ -1231,7 +1236,7 @@ body {
 .about--banner h2::before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 30px;
     left: 268px;
     width: 30px;
     height: 30px;
@@ -1243,7 +1248,7 @@ body {
     content: "";
     position: absolute;
     top: 255px;
-    left: 255px;
+    left: 290px;
     width: 10px;
     height: 10px;
     background-color: #0f33ff
@@ -1408,10 +1413,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/contact-visual.png");
+    /* background-image: url("../img/contact-visual.png");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat */
 }
 
 .contact--lockup {
