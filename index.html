@@ -24,6 +24,15 @@
       image.style.transform = `translate(${translateX}px, ${translateY}px)`;
     });
 
+    setInterval(function () {
+      const image = document.getElementById('moving-image');
+      const maxFloat = 0.8; // Maximum floating distance in pixels
+
+      const floatY = Math.sin(Date.now() / 1000) * maxFloat; // Y-axis floating motion
+
+      image.style.transform += `translateY(${floatY}px)`; // Append to existing transform
+    }, 50); // Adjust interval for smoother motion
+
     document.addEventListener('DOMContentLoaded', function () {
       const text = "Your next<br>interactive<br>experience".split('');
       let index = 0;
