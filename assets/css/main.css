@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Montserrat';
     src: url("fonts/Montserrat-Black.eot");
@@ -572,14 +571,26 @@ body {
     text-transform: uppercase;
     background-color: #0f33ff;
     border: none;
+    border-radius: 0px;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .4s ease-in-out, visibility 0s .4s;
-    transition: opacity .4s ease-in-out, visibility 0s .4s
+    transition: opacity .4s ease-in-out, visibility 0s .4s;
+    transition: line-height .1s ease-in-out;
+    transition: border-radius .5s ease-in-out;
+}
+
+.header--cta.cta:hover{
+    background-color: #c83cf3;
+    transform: translate(-50%, -50%);
+    line-height: 36px;
+    font-size: medium;
+    transition: line-height .15s ease-in-out;
+    transition: font-size .15s ease-in-out;
 }
 
 .header--cta:focus {
-    outline: none
+    outline: none;
 }
 
 .header--cta.is-active {
@@ -782,7 +793,7 @@ body {
     /* Smooth transition */
 }
 
-#moving-image-ship{
+#moving-image-ship {
     position: absolute;
     transition: transform 0.2s ease-out;
     /* Smooth transition */
@@ -1870,6 +1881,10 @@ body {
     border-radius: 4px;
     opacity: 0;
     background-color: #0f33ff
+}
+
+.outer-nav>li:hover {
+    transform: scale(1.1); /* Adjust scaling factor as desired */
 }
 
 .outer-nav>li.is-active::before {
