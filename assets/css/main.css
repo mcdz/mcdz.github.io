@@ -1985,3 +1985,88 @@ body {
     -webkit-transition-delay: .16s;
     transition-delay: .16s
 }
+
+/* PORTFOLIO STYLES */
+
+#portshowcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+#portshowcase ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#portshowcase ul li {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#portshowcase ul li img {
+    width: 100%;
+    height: auto;
+    transform-origin: top;
+    /* Added to ensure scaling from center */
+    transition: transform 0.2s ease;
+    /* Moved transition to base state */
+}
+
+#portshowcase ul li img:hover {
+    width: 100%;
+    border: #0f33ff;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    transform: scale(1.05);
+}
+
+/* FULL VIEW */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    transition: transform 0.1s ease;
+}
+
+#overlay img {
+    /* border: #0f33ff;
+    border-style: solid; */
+    box-shadow: #282828;
+    border-width: 4px;
+}
+
+#largeImage {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 10%;
+}
+
+/* #closeButton {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    /* Increase padding for bigger button */
+    border-radius: 50%;
+    /* Optional: makes the button round */
+}
+
+#closeButton :hover {
+    color: #c0c0c0;
+}
