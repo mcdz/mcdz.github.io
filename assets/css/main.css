@@ -2036,9 +2036,6 @@ body {
 }
 
 #overlay img {
-    /* border: #0f33ff;
-    border-style: solid; */
-    box-shadow: #282828;
     border-width: 4px;
 }
 
@@ -2048,24 +2045,22 @@ body {
     margin-top: 10%;
 }
 
-/* #closeButton {
+#closeButton {
     display: none;
     position: absolute;
     top: 10px;
     right: 10px;
-} */
-#closeButton {
+}
+/* #closeButton {
     position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: #000;
     border: none;
     cursor: pointer;
     padding: 10px;
     /* Increase padding for bigger button */
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* Optional: makes the button round */
-}
+} */
 
 #closeButton :hover {
     color: #c0c0c0;

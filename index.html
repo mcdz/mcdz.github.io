@@ -82,6 +82,8 @@
     function openImage(img) {
       var overlay = document.getElementById("overlay");
       var largeImg = document.getElementById("largeImage");
+      var hnt = document.getElementById("hnt");
+      hnt.style.display = "none";
       overlay.style.display = "block";
       largeImg.src = img.src;
     }
@@ -89,6 +91,8 @@
     function closeImage() {
       var overlay = document.getElementById("overlay");
       overlay.style.display = "none";
+      var hnt = document.getElementById("hnt");
+      hnt.style.display = "flex";
     }
 
 
@@ -150,7 +154,7 @@
       <div id="viewport" class="l-viewport">
 
         <div class="l-wrapper">
-          <header class="header">
+          <header class="header" id="hnt">
             <a class="header--logo" href="#0">
               <img src="assets/img/logo.png" alt="Whiskers Creative">
               <p>Whiskers Creative</p>
