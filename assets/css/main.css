@@ -683,6 +683,14 @@ body {
     content: "05"
 }
 
+.side-nav li:nth-child(6)::before {
+    content: "06"
+}
+
+.side-nav li:nth-child(7)::before {
+    content: "07"
+}
+
 .side-nav li.is-active {
     color: #0f33ff;
     -webkit-transition: color .4s ease-in-out;
@@ -1414,10 +1422,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url("../img/contact-visual.png");
+    background-image: url("../img/contact-visual.png");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat */
+    background-repeat: no-repeat
 }
 
 .contact--lockup {
@@ -1784,7 +1792,7 @@ body {
 }
 
 .container {
-    background-image: url("../img/contact-visual.png");
+    background-image: url("../img/_contact-visual.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1964,6 +1972,16 @@ body {
 }
 
 .outer-nav li.is-vis:nth-child(5) {
+    -webkit-transition-delay: .16s;
+    transition-delay: .16s
+}
+
+.outer-nav li.is-vis:nth-child(6) {
+    -webkit-transition-delay: .16s;
+    transition-delay: .16s
+}
+
+.outer-nav li.is-vis:nth-child(7) {
     -webkit-transition-delay: .16s;
     transition-delay: .16s
 }
